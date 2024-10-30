@@ -8,17 +8,19 @@ import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.compo
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 
 
-
 @NgModule({
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
-    UncommonPageComponent
+    UncommonPageComponent,
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
     PrimeNGModule
+  ],
+  exports:[
+
   ]
 })
 export class ProductsModule { }

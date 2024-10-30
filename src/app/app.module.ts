@@ -14,7 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import localesEsMX from '@angular/common/locales/es-MX'
 import localesFrCA from '@angular/common/locales/fr-CA'
 
-import { registerLocaleData } from '@angular/common'
+import { registerLocaleData } from '@angular/common';
+import { OrderComponent } from './products/pages/order/order.component'
+import { ToggleCasePipe } from './products/pipes/toggle-caase.pipe';
+import { CanflyPipeHero } from './products/pipes/canfly.pipe';
+
+
 
 registerLocaleData( localesEsMX );
 registerLocaleData( localesFrCA );
@@ -23,7 +28,7 @@ registerLocaleData( localesFrCA );
   declarations: [
     AppComponent,
     MenuComponent,
-
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,12 @@ registerLocaleData( localesFrCA );
     ButtonModule,
     PrimeNGModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
+    //pipes
+    ToggleCasePipe,
+    CanflyPipeHero
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'es-MX'
