@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import { OrderComponent } from './products/pages/order/order.component'
 import { ToggleCasePipe } from './products/pipes/toggle-caase.pipe';
 import { CanflyPipeHero } from './products/pipes/canfly.pipe';
+import { SortByPipe } from './products/pipes/sortBy.pipe';
 
 
 
@@ -29,6 +30,11 @@ registerLocaleData( localesFrCA );
     AppComponent,
     MenuComponent,
     OrderComponent,
+
+    //pipes
+    ToggleCasePipe,
+    CanflyPipeHero,
+    SortByPipe
   ],
   imports: [
     BrowserModule,
@@ -38,14 +44,15 @@ registerLocaleData( localesFrCA );
     SharedModule,
     BrowserAnimationsModule,
 
-
-    //pipes
-    ToggleCasePipe,
-    CanflyPipeHero
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'es-MX'
   }],
+  exports:[
+    ToggleCasePipe,
+    CanflyPipeHero,
+    SortByPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

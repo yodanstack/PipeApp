@@ -1,7 +1,7 @@
 import { Pipe, type PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'appanfly',
+  name: 'canFly',
 
 })
 export class CanflyPipeHero implements PipeTransform {
